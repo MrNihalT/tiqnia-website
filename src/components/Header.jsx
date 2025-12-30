@@ -1,4 +1,35 @@
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const NavLinks = () => (
+    <ul className="nav navbar-nav menu">
+        <li className="nav-item">
+            <a className="nav-link active" href="#">
+                Home
+            </a>
+        </li>
+        <li className="nav-item">
+            <a className="nav-link " href="#about-event">
+                Events
+            </a>
+        </li>
+        <li className="nav-item">
+            <a className="nav-link " href="#About-us">
+                About US
+            </a>
+        </li>
+        <li className="nav-item">
+            <a className="nav-link " href="#BCA">
+                BCA
+            </a>
+        </li>
+        <li className="nav-item">
+            <a className="nav-link " href="#contact">
+                Contact
+            </a>
+        </li>
+    </ul>
+);
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -40,40 +71,30 @@ const Header = () => {
                     <span className="lnr lnr-text-align-right"></span>
                     <i className="fa fa-bars" style={{ color: "#fff" }}></i>
                 </button>
+
+                {/* Desktop Menu - Hidden on mobile */}
                 <div
-                    className={`collapse navbar-collapse flex-sm-row-reverse ${
-                        isMenuOpen ? "show" : ""
-                    }`}
+                    className="collapse navbar-collapse flex-sm-row-reverse d-none d-md-flex"
                     id="headernav"
                 >
-                    <ul className="nav navbar-nav menu">
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " href="#about-event">
-                                Events
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " href="#About-us">
-                                About US
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " href="#BCA">
-                                BCA
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
+                    <NavLinks />
                 </div>
+
+                {/* Mobile Menu - Animated */}
+                <AnimatePresence>
+                    {isMenuOpen && (
+                        <motion.div
+                            className="d-md-none navbar-collapse flex-sm-row-reverse"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            style={{ overflow: "hidden" }}
+                        >
+                            <NavLinks />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </header>
     );
