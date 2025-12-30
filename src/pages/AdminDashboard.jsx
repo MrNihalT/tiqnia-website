@@ -490,6 +490,79 @@ const AdminDashboard = () => {
                                                                 </button>
                                                             </div>
                                                             <div className="card-body">
+                                                                {/* Icon / Image */}
+                                                                <div className="mb-2">
+                                                                    <div className="row">
+                                                                        <div className="col-6">
+                                                                            <label className="form-label small">
+                                                                                Icon
+                                                                                Class
+                                                                            </label>
+                                                                            <input
+                                                                                type="text"
+                                                                                className="form-control form-control-sm"
+                                                                                placeholder="e.g. lnr lnr-clock"
+                                                                                value={
+                                                                                    card.icon ||
+                                                                                    ""
+                                                                                }
+                                                                                onChange={(
+                                                                                    e
+                                                                                ) => {
+                                                                                    const newCards =
+                                                                                        [
+                                                                                            ...generalInfo.aboutCards,
+                                                                                        ];
+                                                                                    newCards[
+                                                                                        index
+                                                                                    ].icon =
+                                                                                        e.target.value;
+                                                                                    setGeneralInfo(
+                                                                                        {
+                                                                                            ...generalInfo,
+                                                                                            aboutCards:
+                                                                                                newCards,
+                                                                                        }
+                                                                                    );
+                                                                                }}
+                                                                            />
+                                                                        </div>
+                                                                        <div className="col-6">
+                                                                            <label className="form-label small">
+                                                                                Image
+                                                                                URL
+                                                                            </label>
+                                                                            <input
+                                                                                type="text"
+                                                                                className="form-control form-control-sm"
+                                                                                placeholder="Overrides icon"
+                                                                                value={
+                                                                                    card.img ||
+                                                                                    ""
+                                                                                }
+                                                                                onChange={(
+                                                                                    e
+                                                                                ) => {
+                                                                                    const newCards =
+                                                                                        [
+                                                                                            ...generalInfo.aboutCards,
+                                                                                        ];
+                                                                                    newCards[
+                                                                                        index
+                                                                                    ].img =
+                                                                                        e.target.value;
+                                                                                    setGeneralInfo(
+                                                                                        {
+                                                                                            ...generalInfo,
+                                                                                            aboutCards:
+                                                                                                newCards,
+                                                                                        }
+                                                                                    );
+                                                                                }}
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                 {/* Count (Optional) */}
                                                                 <div className="mb-2">
                                                                     <label className="form-label small">

@@ -5,16 +5,8 @@ import { db } from "../firebase";
 const AboutEvent = () => {
     const [info, setInfo] = useState({
         aboutEventText: "Loading event details...",
-        eventCount: "8",
-        card1Title: "Events",
-        card1Link: "https://forms.gle/t6vWyAET3kV4boHd7",
-        card2Title: "Treasure Hunt",
-        card2Link: "https://forms.gle/t6vWyAET3kV4boHd7",
-        card3Title: "Spot Games",
-        card3Link: "https://forms.gle/t6vWyAET3kV4boHd7",
-        card4Title: "Time",
-        card4Link: "https://forms.gle/t6vWyAET3kV4boHd7",
         registrationUrl: "https://forms.gle/t6vWyAET3kV4boHd7",
+        aboutCards: [],
     });
 
     useEffect(() => {
@@ -24,7 +16,48 @@ const AboutEvent = () => {
                     doc(db, "settings", "general_info")
                 );
                 if (docSnap.exists()) {
-                    setInfo((prev) => ({ ...prev, ...docSnap.data() }));
+                    const data = docSnap.data();
+                    // Migration fallback logic for legacy data
+                    if (!data.aboutCards || data.aboutCards.length === 0) {
+                        data.aboutCards = [
+                            {
+                                id: 1,
+                                count: data.eventCount || "8",
+                                title: data.card1Title || "Events",
+                                link: data.card1Link || data.registrationUrl,
+                                description:
+                                    "There will be " +
+                                    (data.eventCount || "8") +
+                                    " interesting events with attractive cash prizes.",
+                                icon: "ion-ios-calendar-outline",
+                            },
+                            {
+                                id: 2,
+                                title: data.card2Title || "Treasure Hunt",
+                                link: data.card2Link || data.registrationUrl,
+                                description:
+                                    "Treasure hunt -only first 10 teams of maximum of 3 persons in a team.",
+                                icon: "ion-ios-search",
+                            },
+                            {
+                                id: 3,
+                                title: data.card3Title || "Spot Games",
+                                link: data.card3Link || data.registrationUrl,
+                                description:
+                                    "Spot games that gives everyone a chance to participate in the fest.",
+                                icon: "lnr lnr-rocket",
+                            },
+                            {
+                                id: 4,
+                                title: data.card4Title || "Time",
+                                link: data.card4Link || data.registrationUrl,
+                                description:
+                                    "Tiqnia starts on 08 January 2026, morning 9:00 am.",
+                                icon: "lnr lnr-clock",
+                            },
+                        ];
+                    }
+                    setInfo((prev) => ({ ...prev, ...data }));
                 }
             } catch (error) {
                 console.error("Error fetching about info:", error);
@@ -37,6 +70,16 @@ const AboutEvent = () => {
         <section className="pt100 pb100">
             <div className="container">
                 <div className="section_title" id="about-event">
+                    <img
+                        src="assets/img/poster2.jpg"
+                        alt="Event Poster"
+                        className="img-fluid mb-4"
+                        style={{
+                            maxHeight: "600px",
+                            width: "auto",
+                            boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                        }}
+                    />
                     <h3 className="title">About the event</h3>
                 </div>
                 <div className="row justify-content-center">
@@ -48,92 +91,46 @@ const AboutEvent = () => {
                 </div>
 
                 <div className="row justify-content-center mt30">
-                    <div className="col-12 col-md-6 col-lg-3 mb-4">
-                        <div className="icon_box_one h-100">
-                            <i className="ion-ios-calendar-outline"></i>
-                            <div className="content">
-                                <h4>
-                                    {info.eventCount} {info.card1Title}
-                                </h4>
-                                <p>
-                                    There will be {info.eventCount} interesting
-                                    events with attractive cash prizes.
-                                </p>
-                                <a
-                                    href={
-                                        info.card1Link || info.registrationUrl
-                                    }
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    click to register
-                                </a>
+                    {(info.aboutCards || []).map((card, index) => (
+                        <div
+                            className="col-12 col-md-6 col-lg-3 mb-4"
+                            key={index}
+                        >
+                            <div className="icon_box_one h-100">
+                                {card.img ? (
+                                    <img
+                                        src={card.img}
+                                        alt={card.title}
+                                        style={{
+                                            height: "50px",
+                                            marginBottom: "20px",
+                                            objectFit: "contain",
+                                        }}
+                                    />
+                                ) : (
+                                    <i
+                                        className={
+                                            card.icon || "ion-ios-star-outline"
+                                        }
+                                    ></i>
+                                )}
+                                <div className="content">
+                                    <h4>
+                                        {card.count ? `${card.count} ` : ""}
+                                        {card.title}
+                                    </h4>
+                                    <p>{card.description}</p>
+                                    <a
+                                        href={card.link || info.registrationUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        click to register
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-3 mb-4">
-                        <div className="icon_box_one h-100">
-                            <i className="ion-ios-search"></i>
-                            <div className="content">
-                                <h4>{info.card2Title}</h4>
-                                <p>
-                                    Treasure hunt -only first 10 teams of
-                                    maximum of 3 persons in a team.
-                                </p>
-                                <a
-                                    href={
-                                        info.card2Link || info.registrationUrl
-                                    }
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    click to register
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-3 mb-4">
-                        <div className="icon_box_one h-100">
-                            <i className="lnr lnr-rocket"></i>
-                            <div className="content">
-                                <h4>{info.card3Title}</h4>
-                                <p>
-                                    Spot games that gives everyone a chance to
-                                    participate in the fest.
-                                </p>
-                                <a
-                                    href={
-                                        info.card3Link || info.registrationUrl
-                                    }
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    click to register
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-3 mb-4">
-                        <div className="icon_box_one h-100">
-                            <i className="lnr lnr-clock"></i>
-                            <div className="content">
-                                <h4>{info.card4Title}</h4>
-                                <p>
-                                    Tiqnia starts on 08 January 2026, morning
-                                    9:00 am.
-                                </p>
-                                <a
-                                    href={
-                                        info.card4Link || info.registrationUrl
-                                    }
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    click to register
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
