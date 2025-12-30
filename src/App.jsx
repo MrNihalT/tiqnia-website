@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import InfoSection from "./components/InfoSection";
+import Poster from "./components/Poster";
 import AboutEvent from "./components/AboutEvent";
 import EventDetails from "./components/EventDetails";
 import AboutUs from "./components/AboutUs";
@@ -27,6 +28,7 @@ const Home = () => (
         <Header />
         <Hero />
         <InfoSection />
+        <Poster />
         <AboutEvent />
         <EventDetails />
         <AboutUs />
