@@ -449,6 +449,19 @@ const AdminDashboard = () => {
                                                     + Add Card
                                                 </button>
                                             </div>
+                                            <div className="text-muted small mb-3">
+                                                Need an icon? Find classes at{" "}
+                                                <a
+                                                    href="https://linearicons.com/free"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    LinearIcons.com
+                                                </a>{" "}
+                                                (e.g.,{" "}
+                                                <code>lnr lnr-rocket</code>) and
+                                                paste them below.
+                                            </div>
 
                                             <div className="row g-3">
                                                 {(
