@@ -35,9 +35,21 @@ const Department = () => {
             <div className="container">
                 <div className="bca" id="BCA">
                     <h3>DEPARTMENT OF COMPUTER APPLICATIONS</h3>
-                    <img src="/assets/img/bcadep.jpg" alt="BCA" />
-                    <img src="/assets/img/insta7.jpeg" alt="BCA" />
-                    <img src="/assets/img/bcadep2.jpg" alt="BCA" />
+                    <img
+                        src="assets/img/bcadep.jpg"
+                        alt="BCA"
+                        className="img-fluid mb-3"
+                    />
+                    <img
+                        src="assets/img/insta7.jpeg"
+                        alt="BCA"
+                        className="img-fluid mb-3"
+                    />
+                    <img
+                        src="assets/img/bcadep2.JPG"
+                        alt="BCA"
+                        className="img-fluid mb-3"
+                    />
 
                     <div className="about_bca">
                         <p>
