@@ -1,8 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Poster = () => {
@@ -23,10 +22,9 @@ const Poster = () => {
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-8">
                         <Swiper
-                            modules={[Navigation, Pagination, Autoplay]}
+                            modules={[Pagination, Autoplay]}
                             spaceBetween={30}
                             slidesPerView={1}
-                            navigation
                             pagination={{ clickable: true }}
                             autoplay={{
                                 delay: 3000,
@@ -38,7 +36,10 @@ const Poster = () => {
                                 <SwiperSlide key={index}>
                                     <div
                                         onClick={() => handleDownload(poster)}
-                                        style={{ cursor: "pointer" }}
+                                        style={{
+                                            cursor: "pointer",
+                                            maxWidth: "100%",
+                                        }}
                                         title="Click to download"
                                     >
                                         <img
@@ -46,9 +47,10 @@ const Poster = () => {
                                             alt={`Tiqnia Poster ${index + 1}`}
                                             className="img-fluid w-100"
                                             style={{
-                                                maxHeight: "600px",
+                                                maxHeight: "1000px",
+                                                maxWidth: "100%",
                                                 objectFit: "contain",
-                                                backgroundColor: "#000",
+                                                backgroundColor: "#fff",
                                             }}
                                         />
                                     </div>
