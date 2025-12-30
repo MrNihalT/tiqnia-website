@@ -46,7 +46,7 @@ const InfoSection = () => {
                             <div className="content">
                                 <h5 className="box_title">mail</h5>
                                 <p>
-                                    <a href="mailto:nihal.chiyoor@gmail.com">
+                                    <a className="abuttu" href="mailto:nihal.chiyoor@gmail.com">
                                         nihal.chiyoor@gmail.com
                                     </a>
                                 </p>
