@@ -35,7 +35,7 @@ const Department = () => {
             <div className="container">
                 <div className="bca" id="BCA">
                     <h3>DEPARTMENT OF COMPUTER APPLICATIONS</h3>
-                    <img src="/assets/img/BCA.jpeg" alt="BCA" />
+                    <img src="/assets/img/bcadep.jpg" alt="BCA" />
                     <div className="about_bca">
                         <p>
                             <b style={{ whiteSpace: "pre-line" }}>{desc}</b>
