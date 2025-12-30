@@ -83,7 +83,7 @@ const Partners = () => {
                     spaceBetween={30}
                     slidesPerView={4}
                     loop={true}
-                    autoplay={{ delay: 2500 }}
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
                     className="brand_carousel"
                     breakpoints={{
                         320: { slidesPerView: 1 },
