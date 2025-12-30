@@ -65,7 +65,7 @@ const Hero = () => {
                                             target="_blank"
                                             rel="noreferrer"
                                         >
-                                            Give suggestions
+                                            Register
                                         </a>
                                     </div>
                                 </div>
