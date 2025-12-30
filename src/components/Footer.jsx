@@ -62,29 +62,29 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="footer_box_body" id="contact">
-                                    <h2>Contacts</h2>
+                                    <h4 className="footer_title">Contacts</h4>
                                     <p>
                                         Phone numbers:
                                         <br />
                                         <br />
-                                        <a href="tel:+91-9526110811">
+                                        <a href="tel:+91-7736697341">
                                             Nihal: +91-7736697341
                                         </a>
                                         <br />
-                                        <a href="tel:+91-8129763260">
-                                            Faadi: +91-8129763260
+                                        <a href="tel:+91-7907962308">
+                                            Faadi: +91-7907962308
                                         </a>
                                         <br />
-                                        <a href="tel:+91-9061874787">
-                                            Hisham: +91-9061874787
+                                        <a href="tel:+91-9072058464">
+                                            Hisham: +91-9072058464
                                         </a>
                                         <br />
-                                        <a href="tel:+91-9633216991">
-                                            Adnan: +91-9633216991
+                                        <a href="tel:+91-7510998229">
+                                            Adnan: +91-7510998229
                                         </a>
                                         <br />
                                         <br />
-                                        <h2>E-mail</h2>
+                                        <h4 className="footer_title">E-mail</h4>
                                         <a href={`mailto:${contactEmail}`}>
                                             {contactEmail}
                                         </a>
