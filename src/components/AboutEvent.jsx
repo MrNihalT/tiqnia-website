@@ -70,16 +70,6 @@ const AboutEvent = () => {
         <section className="pt100 pb100">
             <div className="container">
                 <div className="section_title" id="about-event">
-                    <img
-                        src="assets/img/poster2.jpg"
-                        alt="Event Poster"
-                        className="img-fluid mb-4"
-                        style={{
-                            maxHeight: "600px",
-                            width: "auto",
-                            boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-                        }}
-                    />
                     <h3 className="title">About the event</h3>
                 </div>
                 <div className="row justify-content-center">
