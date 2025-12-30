@@ -134,7 +134,7 @@ const Footer = () => {
                                 <div className="footer_box_body">
                                     <ul className="instagram_list">
                                         <li>
-                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                            <a href="https://www.instagram.com/bceeyeah/">
                                                 <img
                                                     src="/assets/img/insta1.jpg"
                                                     alt="instagram"
@@ -142,7 +142,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                            <a href="https://www.instagram.com/bceeyeah/">
                                                 <img
                                                     src="/assets/img/insta2.jpg"
                                                     alt="instagram"
@@ -150,7 +150,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                            <a href="https://www.instagram.com/bceeyeah/">
                                                 <img
                                                     src="/assets/img/insta3.JPG"
                                                     alt="instagram"
@@ -158,7 +158,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                            <a href="https://www.instagram.com/bceeyeah/">
                                                 <img
                                                     src="/assets/img/insta4.JPG"
                                                     alt="instagram"
