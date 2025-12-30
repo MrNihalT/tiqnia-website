@@ -136,7 +136,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
                                                 <img
-                                                    src="../../public/assets/img/insta1.jpg"
+                                                    src="/assets/img/insta1.jpg"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -144,7 +144,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
                                                 <img
-                                                    src="../../public/assets/img/insta2.jpg"
+                                                    src="/assets/img/insta2.jpg"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -152,7 +152,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
                                                 <img
-                                                    src="../../public/assets/img/insta3.jpg"
+                                                    src="/assets/img/insta3.JPG"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -160,7 +160,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
                                                 <img
-                                                    src="../../public/assets/img/insta4.jpg"
+                                                    src="/assets/img/insta4.JPG"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -168,7 +168,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/tiqnia2023/">
                                                 <img
-                                                    src="../../public/assets/img/insta5.jpg"
+                                                    src="/assets/img/insta5.JPG"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -176,7 +176,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/tiqnia2023/">
                                                 <img
-                                                    src="../../public/assets/img/insta6.jpg"
+                                                    src="/assets/img/insta6.JPG"
                                                     alt="instagram"
                                                 />
                                             </a>
