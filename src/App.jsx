@@ -16,7 +16,7 @@ import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
-
+import { HelmetProvider } from "react-helmet-async";
 const Home = () => (
     <>
         <SEO
@@ -57,22 +57,24 @@ function App() {
     }
 
     return (
-        <AuthProvider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/admin/login" element={<Login />} />
-                    <Route
-                        path="/admin"
-                        element={
-                            <ProtectedRoute>
-                                <AdminDashboard />
-                            </ProtectedRoute>
-                        }
-                    />
-                </Routes>
-            </Router>
-        </AuthProvider>
+        <HelmetProvider>
+            <AuthProvider>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/admin/login" element={<Login />} />
+                        <Route
+                            path="/admin"
+                            element={
+                                <ProtectedRoute>
+                                    <AdminDashboard />
+                                </ProtectedRoute>
+                            }
+                        />
+                    </Routes>
+                </Router>
+            </AuthProvider>
+        </HelmetProvider>
     );
 }
 
