@@ -23,6 +23,7 @@ const AdminDashboard = () => {
         departmentDescription: "The Department of COMPUTER APPLICATION at...",
         registrationUrl: "https://forms.gle/t6vWyAET3kV4boHd7", // Global Default
         contactEmail: "nihal.chiyoor@gmail.com",
+        aboutCards: [],
 
         // About Event
         aboutEventText:
@@ -77,8 +78,50 @@ const AdminDashboard = () => {
         try {
             // General
             const genSnap = await getDoc(generalDocRef);
-            if (genSnap.exists())
-                setGeneralInfo((prev) => ({ ...prev, ...genSnap.data() }));
+            if (genSnap.exists()) {
+                const data = genSnap.data();
+                // Migration: If aboutCards is missing, build it from legacy
+                if (!data.aboutCards || data.aboutCards.length === 0) {
+                    data.aboutCards = [
+                        {
+                            id: 1,
+                            count: data.eventCount || "8",
+                            title: data.card1Title || "Events",
+                            link: data.card1Link || data.registrationUrl,
+                            description:
+                                "There will be " +
+                                (data.eventCount || "8") +
+                                " interesting events with attractive cash prizes.",
+                            icon: "ion-ios-calendar-outline",
+                        },
+                        {
+                            id: 2,
+                            title: data.card2Title || "Treasure Hunt",
+                            link: data.card2Link || data.registrationUrl,
+                            description:
+                                "Treasure hunt -only first 10 teams of maximum of 3 persons in a team.",
+                            icon: "ion-ios-search",
+                        },
+                        {
+                            id: 3,
+                            title: data.card3Title || "Spot Games",
+                            link: data.card3Link || data.registrationUrl,
+                            description:
+                                "Spot games that gives everyone a chance to participate in the fest.",
+                            icon: "lnr lnr-rocket",
+                        },
+                        {
+                            id: 4,
+                            title: data.card4Title || "Time",
+                            link: data.card4Link || data.registrationUrl,
+                            description:
+                                "Tiqnia starts on 08 January 2026, morning 9:00 am.",
+                            icon: "lnr lnr-clock",
+                        },
+                    ];
+                }
+                setGeneralInfo((prev) => ({ ...prev, ...data }));
+            }
 
             // Events
             const eventsSnap = await getDocs(eventsColRef);
@@ -373,280 +416,217 @@ const AdminDashboard = () => {
                                         </div>
 
                                         {/* --- Card Configuration Grid --- */}
+                                        {/* --- Card Configuration Grid --- */}
                                         <div className="col-12">
-                                            <h5 className="mb-3 text-primary">
-                                                About Event Cards Configuration
-                                            </h5>
+                                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 className="text-primary mb-0">
+                                                    About Event Cards
+                                                    Configuration
+                                                </h5>
+                                                <button
+                                                    type="button"
+                                                    className="btn btn-sm btn-success"
+                                                    onClick={() => {
+                                                        const newCard = {
+                                                            id: Date.now(),
+                                                            count: "",
+                                                            title: "New Card",
+                                                            description:
+                                                                "Description here",
+                                                            link: generalInfo.registrationUrl,
+                                                            icon: "lnr lnr-star", // Default icon
+                                                        };
+                                                        setGeneralInfo({
+                                                            ...generalInfo,
+                                                            aboutCards: [
+                                                                ...(generalInfo.aboutCards ||
+                                                                    []),
+                                                                newCard,
+                                                            ],
+                                                        });
+                                                    }}
+                                                >
+                                                    + Add Card
+                                                </button>
+                                            </div>
+
                                             <div className="row g-3">
-                                                {/* Card 1 */}
-                                                <div className="col-md-6">
-                                                    <div className="card h-100 border-primary">
-                                                        <div className="card-header bg-primary text-white">
-                                                            Card 1 (Events)
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <div className="mb-2">
-                                                                <label className="form-label small">
-                                                                    Count
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.eventCount
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
+                                                {(
+                                                    generalInfo.aboutCards || []
+                                                ).map((card, index) => (
+                                                    <div
+                                                        className="col-md-6"
+                                                        key={index}
+                                                    >
+                                                        <div className="card h-100 border-secondary">
+                                                            <div className="card-header bg-light d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    Card{" "}
+                                                                    {index + 1}
+                                                                </span>
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-xs btn-outline-danger py-0"
+                                                                    onClick={() => {
+                                                                        const newCards =
+                                                                            generalInfo.aboutCards.filter(
+                                                                                (
+                                                                                    _,
+                                                                                    i
+                                                                                ) =>
+                                                                                    i !==
+                                                                                    index
+                                                                            );
                                                                         setGeneralInfo(
                                                                             {
                                                                                 ...generalInfo,
-                                                                                eventCount:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
+                                                                                aboutCards:
+                                                                                    newCards,
                                                                             }
-                                                                        )
-                                                                    }
-                                                                />
+                                                                        );
+                                                                    }}
+                                                                >
+                                                                    Remove
+                                                                </button>
                                                             </div>
-                                                            <div className="mb-2">
-                                                                <label className="form-label small">
-                                                                    Title
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card1Title
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card1Title:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <label className="form-label small">
-                                                                    Link
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card1Link
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card1Link:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                {/* Card 2 */}
-                                                <div className="col-md-6">
-                                                    <div className="card h-100 border-info">
-                                                        <div className="card-header bg-info text-dark">
-                                                            Card 2 (Treasure
-                                                            Hunt)
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <div className="mb-2">
-                                                                <label className="form-label small">
-                                                                    Title
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card2Title
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card2Title:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <label className="form-label small">
-                                                                    Link
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card2Link
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card2Link:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                {/* Card 3 */}
-                                                <div className="col-md-6">
-                                                    <div className="card h-100 border-warning">
-                                                        <div className="card-header bg-warning text-dark">
-                                                            Card 3 (Spot Games)
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <div className="mb-2">
-                                                                <label className="form-label small">
-                                                                    Title
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card3Title
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card3Title:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <label className="form-label small">
-                                                                    Link
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card3Link
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card3Link:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
+                                                            <div className="card-body">
+                                                                {/* Count (Optional) */}
+                                                                <div className="mb-2">
+                                                                    <label className="form-label small">
+                                                                        Count
+                                                                        (Optional)
+                                                                    </label>
+                                                                    <input
+                                                                        type="text"
+                                                                        className="form-control form-control-sm"
+                                                                        value={
+                                                                            card.count ||
+                                                                            ""
+                                                                        }
+                                                                        onChange={(
+                                                                            e
+                                                                        ) => {
+                                                                            const newCards =
+                                                                                [
+                                                                                    ...generalInfo.aboutCards,
+                                                                                ];
+                                                                            newCards[
+                                                                                index
+                                                                            ].count =
+                                                                                e.target.value;
+                                                                            setGeneralInfo(
+                                                                                {
+                                                                                    ...generalInfo,
+                                                                                    aboutCards:
+                                                                                        newCards,
+                                                                                }
+                                                                            );
+                                                                        }}
+                                                                    />
+                                                                </div>
+                                                                {/* Title */}
+                                                                <div className="mb-2">
+                                                                    <label className="form-label small">
+                                                                        Title
+                                                                    </label>
+                                                                    <input
+                                                                        type="text"
+                                                                        className="form-control form-control-sm"
+                                                                        value={
+                                                                            card.title ||
+                                                                            ""
+                                                                        }
+                                                                        onChange={(
+                                                                            e
+                                                                        ) => {
+                                                                            const newCards =
+                                                                                [
+                                                                                    ...generalInfo.aboutCards,
+                                                                                ];
+                                                                            newCards[
+                                                                                index
+                                                                            ].title =
+                                                                                e.target.value;
+                                                                            setGeneralInfo(
+                                                                                {
+                                                                                    ...generalInfo,
+                                                                                    aboutCards:
+                                                                                        newCards,
+                                                                                }
+                                                                            );
+                                                                        }}
+                                                                    />
+                                                                </div>
+                                                                {/* Description */}
+                                                                <div className="mb-2">
+                                                                    <label className="form-label small">
+                                                                        Description
+                                                                    </label>
+                                                                    <textarea
+                                                                        className="form-control form-control-sm"
+                                                                        rows="2"
+                                                                        value={
+                                                                            card.description ||
+                                                                            ""
+                                                                        }
+                                                                        onChange={(
+                                                                            e
+                                                                        ) => {
+                                                                            const newCards =
+                                                                                [
+                                                                                    ...generalInfo.aboutCards,
+                                                                                ];
+                                                                            newCards[
+                                                                                index
+                                                                            ].description =
+                                                                                e.target.value;
+                                                                            setGeneralInfo(
+                                                                                {
+                                                                                    ...generalInfo,
+                                                                                    aboutCards:
+                                                                                        newCards,
+                                                                                }
+                                                                            );
+                                                                        }}
+                                                                    ></textarea>
+                                                                </div>
+                                                                {/* Link */}
+                                                                <div className="mb-2">
+                                                                    <label className="form-label small">
+                                                                        Link
+                                                                    </label>
+                                                                    <input
+                                                                        type="text"
+                                                                        className="form-control form-control-sm"
+                                                                        value={
+                                                                            card.link ||
+                                                                            ""
+                                                                        }
+                                                                        onChange={(
+                                                                            e
+                                                                        ) => {
+                                                                            const newCards =
+                                                                                [
+                                                                                    ...generalInfo.aboutCards,
+                                                                                ];
+                                                                            newCards[
+                                                                                index
+                                                                            ].link =
+                                                                                e.target.value;
+                                                                            setGeneralInfo(
+                                                                                {
+                                                                                    ...generalInfo,
+                                                                                    aboutCards:
+                                                                                        newCards,
+                                                                                }
+                                                                            );
+                                                                        }}
+                                                                    />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                {/* Card 4 */}
-                                                <div className="col-md-6">
-                                                    <div className="card h-100 border-success">
-                                                        <div className="card-header bg-success text-white">
-                                                            Card 4 (Time)
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <div className="mb-2">
-                                                                <label className="form-label small">
-                                                                    Title
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card4Title
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card4Title:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <label className="form-label small">
-                                                                    Link
-                                                                </label>
-                                                                <input
-                                                                    type="text"
-                                                                    className="form-control form-control-sm"
-                                                                    value={
-                                                                        generalInfo.card4Link
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        setGeneralInfo(
-                                                                            {
-                                                                                ...generalInfo,
-                                                                                card4Link:
-                                                                                    e
-                                                                                        .target
-                                                                                        .value,
-                                                                            }
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="col-12">
