@@ -1,8 +1,4 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 
 const Poster = () => {
     const posters = ["/assets/img/poster.jpg", "/assets/img/poster2.jpg"];
@@ -17,49 +13,32 @@ const Poster = () => {
     };
 
     return (
-        <section className="pt100 pb100">
+        <section className="pt100 bg-gray">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-12 col-md-8">
-                        <Swiper
-                            modules={[Pagination, Autoplay]}
-                            spaceBetween={30}
-                            slidesPerView={1}
-                            pagination={{ clickable: true }}
-                            autoplay={{
-                                delay: 3000,
-                                disableOnInteraction: false,
-                            }}
-                            className="rounded shadow-lg"
-                        >
-                            {posters.map((poster, index) => (
-                                <SwiperSlide key={index}>
-                                    <div
-                                        onClick={() => handleDownload(poster)}
-                                        style={{
-                                            cursor: "pointer",
-                                            maxWidth: "100%",
-                                        }}
-                                        title="Click to download"
-                                    >
-                                        <img
-                                            src={poster}
-                                            alt={`Tiqnia Poster ${index + 1}`}
-                                            className="img-fluid w-100"
-                                            style={{
-                                                maxHeight: "1000px",
-                                                maxWidth: "100%",
-                                                objectFit: "contain",
-                                                backgroundColor: "#fff",
-                                            }}
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                        <p className="text-center mt-3 text-muted">
-                            <small>Click on the poster to download</small>
-                        </p>
+                    <div className="col-12 col-md-10">
+                        {posters.map((poster, index) => (
+                            <div
+                                key={index}
+                                className="d-flex justify-content-center align-items-center w-100 mb-5"
+                                onClick={() => handleDownload(poster)}
+                                style={{
+                                    cursor: "pointer",
+                                }}
+                                title="Click to download"
+                            >
+                                <img
+                                    src={poster}
+                                    alt={`Tiqnia Poster ${index + 1}`}
+                                    className="img-fluid rounded shadow-sm"
+                                    style={{
+                                        width: "auto",
+                                        height: "auto",
+                                        maxWidth: "100%",
+                                    }}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
