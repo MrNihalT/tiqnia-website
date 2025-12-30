@@ -101,7 +101,7 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <a
-                                                href="https://www.google.com/maps/place/WMO+IMAM+GAZZALI+ARTS+%26+SCIENCE+COLLEGE/@11.7718843,76.0459785,187m/data=!3m1!1e3!4m7!3m6!1s0x3ba5de5313fa125d:0xeae9b896fddae1ec!8m2!3d11.7718699!4d76.046764!15sCh93bW8gaWcgYXJ0cyBhbmQgc2NpZW5jZSBjb2xsZWdlkgEHY29sbGVnZeABAA!16s%2Fg%2F11rhnytt9m?coh=164777&entry=tt"
+                                                href="https://maps.app.goo.gl/1rNWjQNphhxcarrSA"
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >
@@ -109,13 +109,13 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="https://www.wmoigasc.co.in/">
                                                 <i className="ion-social-dribbble"></i>
                                             </a>
                                         </li>
                                         <li>
                                             <a
-                                                href="https://www.instagram.com/tiqnia2023/"
+                                                href="https://www.instagram.com/wmo_igasc__?igsh=MjA1MWZsaTA1aWd5"
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >
@@ -134,9 +134,33 @@ const Footer = () => {
                                 <div className="footer_box_body">
                                     <ul className="instagram_list">
                                         <li>
-                                            <a href="https://www.instagram.com/tiqnia2023/">
+                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
                                                 <img
-                                                    src="/assets/img/cleander/c22c07e6-8cba-46e3-9c30-5873e60532b3 (1).jpg"
+                                                    src="../../public/assets/img/insta1.jpg"
+                                                    alt="instagram"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                                <img
+                                                    src="../../public/assets/img/insta2.jpg"
+                                                    alt="instagram"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                                <img
+                                                    src="../../public/assets/img/insta3.jpg"
+                                                    alt="instagram"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/bceeyeah?igsh=MTJzMWExdjN3N2FuZQ==">
+                                                <img
+                                                    src="../../public/assets/img/insta4.jpg"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -144,7 +168,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/tiqnia2023/">
                                                 <img
-                                                    src="/assets/img/cleander/6968026d-c58c-4d56-9050-750cd323f05b.jpg"
+                                                    src="../../public/assets/img/insta5.jpg"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -152,31 +176,7 @@ const Footer = () => {
                                         <li>
                                             <a href="https://www.instagram.com/tiqnia2023/">
                                                 <img
-                                                    src="/assets/img/WhatsApp Image 2023-02-12 at 7.27.21 AM.jpeg"
-                                                    alt="instagram"
-                                                />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/tiqnia2023/">
-                                                <img
-                                                    src="/assets/img/cleander/WhatsApp Image 2023-02-09 at 4.55.05 PM.jpeg"
-                                                    alt="instagram"
-                                                />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/tiqnia2023/">
-                                                <img
-                                                    src="/assets/img/WhatsApp Image 2023-02-15 at 4.30.27 PM.jpeg"
-                                                    alt="instagram"
-                                                />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/tiqnia2023/">
-                                                <img
-                                                    src="/assets/img/cleander/b3c3ef09-f980-4837-a9a3-a15f9fdc75ec.jpg"
+                                                    src="../../public/assets/img/insta6.jpg"
                                                     alt="instagram"
                                                 />
                                             </a>
@@ -222,9 +222,9 @@ const Footer = () => {
                             </div>
                             <iframe
                                 className="map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.404263352667!2d76.04597845448868!3d11.771884349624298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5de5313fa125d%3A0xeae9b896fddae1ec!2sWMO%20IMAM%20GAZZALI%20ARTS%20%26%20SCIENCE%20COLLEGE!5e1!3m2!1sen!2sin!4v1676040330543!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4480.771482451472!2d76.057215!3d11.7613328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5dfb730ea41c3%3A0x23d36ebf31438ad7!2sWMO%20Imam%20Gazzali%20Arts%20%26%20Science%20College!5e1!3m2!1sen!2sin!4v1767132613023!5m2!1sen!2sin"
                                 width="200"
-                                height="100"
+                                height="200"
                                 style={{
                                     border: 0,
                                     width: "100%",
