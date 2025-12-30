@@ -15,13 +15,13 @@ const Hero = () => {
         },
         {
             title: "INTER COLLEGIATE IG FEST",
-            subtitle: "TIQNIA 2026",
+            subtitle: "IG FEST 2026",
             date: "08 January 2026",
             bg: "/assets/img/bg/slider.png",
         },
         {
             title: "WMO IG ARTS & SCIENCE COLLEGE",
-            subtitle: "TIQNIA 2026",
+            subtitle: "IG FEST 2026",
             date: "Kappumchal panamaram",
             bg: "/assets/img/bg/slider.png",
         },
