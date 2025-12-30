@@ -46,7 +46,7 @@ const Department = () => {
                         className="img-fluid mb-3"
                     />
                     <img
-                        src="assets/img/bcadep2.jpg"
+                        src="assets/img/bcadep2.JPG"
                         alt="BCA"
                         className="img-fluid mb-3"
                     />
