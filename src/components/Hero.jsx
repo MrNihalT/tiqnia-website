@@ -13,18 +13,18 @@ const Hero = () => {
             date: "Wmo ig arts & science college",
             bg: "/assets/img/bg/slider.png",
         },
-        // {
-        //     title: "INTER COLLEGIATE IG FEST",
-        //     subtitle: "IG FEST 2026",
-        //     date: "08 January 2026",
-        //     bg: "/assets/img/bg/slider.png",
-        // },
-        // {
-        //     title: "WMO IG ARTS & SCIENCE COLLEGE",
-        //     subtitle: "IG FEST 2026",
-        //     date: "Kappumchal panamaram",
-        //     bg: "/assets/img/bg/slider.png",
-        // },
+        {
+            title: "INTER COLLEGIATE IG FEST",
+            subtitle: "IG FEST 2026",
+            date: "08 January 2026",
+            bg: "/assets/img/bg/slider.png",
+        },
+        {
+            title: "WMO IG ARTS & SCIENCE COLLEGE",
+            subtitle: "IG FEST 2026",
+            date: "Kappumchal panamaram",
+            bg: "/assets/img/bg/slider.png",
+        },
     ];
 
     return (
@@ -60,7 +60,7 @@ const Hero = () => {
                                             {slide.date}
                                         </p>
                                         <a
-                                            href="https://forms.gle/t6vWyAET3kV4boHd7"
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSdq6vwMMFyfPaXFA-j_gz50heXiX0pvhf7XU4eJaG7mjvsMjQ/viewform"
                                             className=" btn btn-primary btn-rounded"
                                             target="_blank"
                                             rel="noreferrer"
