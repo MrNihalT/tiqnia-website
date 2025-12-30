@@ -13,18 +13,18 @@ const Hero = () => {
             date: "Wmo ig arts & science college",
             bg: "/assets/img/bg/slider.png",
         },
-        {
-            title: "INTER COLLEGIATE IG FEST",
-            subtitle: "IG FEST 2026",
-            date: "08 January 2026",
-            bg: "/assets/img/bg/slider.png",
-        },
-        {
-            title: "WMO IG ARTS & SCIENCE COLLEGE",
-            subtitle: "IG FEST 2026",
-            date: "Kappumchal panamaram",
-            bg: "/assets/img/bg/slider.png",
-        },
+        // {
+        //     title: "INTER COLLEGIATE IG FEST",
+        //     subtitle: "IG FEST 2026",
+        //     date: "08 January 2026",
+        //     bg: "/assets/img/bg/slider.png",
+        // },
+        // {
+        //     title: "WMO IG ARTS & SCIENCE COLLEGE",
+        //     subtitle: "IG FEST 2026",
+        //     date: "Kappumchal panamaram",
+        //     bg: "/assets/img/bg/slider.png",
+        // },
     ];
 
     return (
@@ -53,9 +53,9 @@ const Hero = () => {
                                                 __html: slide.title,
                                             }}
                                         ></h1>
-                                        <strong className="cover-xl-text">
+                                        <h2 className="cover-xl-text">
                                             {slide.subtitle}
-                                        </strong>
+                                        </h2>
                                         <p className="cover-date">
                                             {slide.date}
                                         </p>

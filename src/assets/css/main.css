@@ -1861,3 +1861,39 @@ body {
         font-weight: 500;
     }
 }
+@media (max-width: 500px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-title {
+        max-width: 380px;
+    }
+}
+@media (max-width: 400px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-title {
+        max-width: 230px;
+        font-size: 17px;
+    }
+}
+@media (max-width: 330px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-title {
+        max-width: 230px;
+        font-size: 17px;
+    }
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-xl-text {
+        max-width: 200px;
+    }
+}
