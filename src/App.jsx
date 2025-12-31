@@ -37,6 +37,7 @@ const Home = () => (
         <Partners />
         <RegisterCTA />
         <Footer />
+        <Analytics />
     </>
 );
 
