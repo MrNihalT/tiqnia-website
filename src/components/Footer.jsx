@@ -7,6 +7,7 @@ import {
     serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import brandInstagram from "../assets/images/brand-instagram.svg";
 
 const Footer = () => {
     const [contactEmail, setContactEmail] = useState("nihal.chiyoor@gmail.com");
@@ -250,7 +251,10 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    Nihal T
+                                    Nihal T {""}
+                                </a>
+                                <a href="https://www.instagram.com/_nihaal_t">
+                                    <img src={brandInstagram} alt="" />
                                 </a>
                             </p>
                         </div>
