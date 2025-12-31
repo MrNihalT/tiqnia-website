@@ -21,7 +21,7 @@ import { HelmetProvider } from "react-helmet-async";
 const Home = () => (
     <>
         <SEO
-            title="TIQNIA 2026 | IG Fest | WMO IG Arts and Science College | IT Fest"
+            title=" IG Fest | TIQNIA 2026 | WMO IG Arts and Science College | IT Fest"
             description="Join TIQNIA 2026 (Tiqnial), the premier Inter-Collegiate IT Fest organized by the Department of Computer Applications at WMO IG Arts and Science College (WMO IG)."
             keywords="ig fest, tiqnia, tiqnial, wmo ig college, WMO IG Arts and Science College, it fest, wmo ig, wmo igasc, computer applications, wayanad college events, tech fest 2026"
         />
