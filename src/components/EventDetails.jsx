@@ -1,9 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const EventDetails = () => {
     const [events, setEvents] = useState([]);
+
+    const posters = [
+        "/assets/img/eventposter/WhatsApp Image 2026-01-06 at 10.39.24 PM (1).jpeg",
+        "/assets/img/eventposter/WhatsApp Image 2026-01-06 at 10.39.24 PM.jpeg",
+        "/assets/img/eventposter/WhatsApp Image 2026-01-06 at 10.39.25 PM (1).jpeg",
+        "/assets/img/eventposter/WhatsApp Image 2026-01-06 at 10.39.25 PM.jpeg",
+    ];
+
+    const handleDownload = (url) => {
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = url.split("/").pop();
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -57,6 +78,9 @@ const EventDetails = () => {
                 <div className="section_title mb50">
                     <h3 className="title">The Events</h3>
                 </div>
+
+                {/* Auto-sliding Event Posters Carousel */}
+
                 <div className="row justify-content-center">
                     {events.map((evt, index) => (
                         <div
@@ -101,6 +125,50 @@ const EventDetails = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="row justify-content-center mb-5">
+                    <div className="col-12 col-md-10">
+                        <Swiper
+                            modules={[Autoplay, Pagination, Navigation]}
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            navigation={true}
+                            className="mySwiper"
+                        >
+                            {posters.map((poster, index) => (
+                                <SwiperSlide key={index}>
+                                    <div
+                                        className="d-flex justify-content-center align-items-center w-100"
+                                        onClick={() => handleDownload(poster)}
+                                        style={{
+                                            cursor: "pointer",
+                                        }}
+                                        title="Click to download"
+                                    >
+                                        <img
+                                            src={poster}
+                                            alt={`Tiqnia Poster ${index + 1}`}
+                                            className="img-fluid rounded shadow-sm"
+                                            style={{
+                                                width: "auto",
+                                                height: "auto",
+                                                maxHeight: "80vh",
+                                                maxWidth: "100%",
+                                                objectFit: "contain",
+                                            }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
             </div>
         </section>
