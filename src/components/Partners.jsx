@@ -20,19 +20,19 @@ const Partners = () => {
                     // Fallback to static data if DB is empty to keep the site looking good initially
                     setBrands([
                         {
-                            link: "https://www.instagram.com/vazhikatti__86/",
+                            link: "https://nihalt.in",
                             img: "/assets/img/brands/alangar.png",
                         },
                         {
-                            link: "https://www.instagram.com/lyfizy_group/",
+                            link: "https://nihalt.in",
                             img: "/assets/img/brands/area51.png",
                         },
                         {
-                            link: "https://www.instagram.com/le_ocio_/",
+                            link: "https://nihalt.in/",
                             img: "/assets/img/brands/chirayil.jpeg",
                         },
                         {
-                            link: "https://instagram.com/kattumadam_marbles?igshid=YmMyMTA2M2Y=",
+                            link: "https://nihalt.in",
                             img: "/assets/img/brands/lipzz.jpeg",
                         },
                         {
