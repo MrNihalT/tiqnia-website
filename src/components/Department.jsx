@@ -50,6 +50,16 @@ const Department = () => {
                         alt="BCA"
                         className="img-fluid mb-3"
                     />
+                    <img
+                        src="assets/img/insta9.jpeg"
+                        alt="BCA"
+                        className="img-fluid mb-3"
+                    />
+                    <img
+                        src="assets/img/insta10.jpeg"
+                        alt="BCA"
+                        className="img-fluid mb-3"
+                    />
 
                     <div className="about_bca">
                         <p>

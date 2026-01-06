@@ -1799,6 +1799,16 @@ textarea.form-control {
 .bca {
     padding-top: 40px;
 }
+.bca img {
+    width: 100%;
+    border-radius: 8px;
+}
+.bca img:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 html,
 body {
     width: 100%;

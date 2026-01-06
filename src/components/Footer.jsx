@@ -57,7 +57,7 @@ const Footer = () => {
                                 <div className="footer_header">
                                     <div className="footer_logo">
                                         <img
-                                            src="/assets/img/logo2.png"
+                                            src="/assets/img/LOGO.png"
                                             alt="evento"
                                         />
                                     </div>
