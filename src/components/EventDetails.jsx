@@ -18,43 +18,28 @@ const EventDetails = () => {
                     setEvents([
                         {
                             name: "IT QUIZZ",
-                            prize: "1'st prize:2000 <br> 2'nd prize:1000",
-                            img: "/assets/img/1caa0201e8795cf8e4ef35b36a71d2dd (1).jpg",
+                            prize: "1'st prize:2000",
+                            img: "/assets/img/quiz.jpg",
                         },
                         {
                             name: "Gaming competition",
-                            prize: "1'st prize:1000 <br> 2'nd prize:500",
+                            prize: "1'st prize:3000",
                             img: "/assets/img/WhatsApp Image 2023-02-08 at 2.5.jpg",
                         },
                         {
-                            name: "Hackathon",
-                            prize: "1'st prize:1000 <br> 2'nd prize:500",
-                            img: "/assets/img/istockphoto-1125107251-612x612.jpg",
+                            name: "Poster Designing",
+                            prize: "1'st prize:1000",
+                            img: "/assets/img/2.png",
                         },
                         {
-                            name: "Debate",
-                            prize: "1'st prize:2000 <br> 2'nd prize:1000",
-                            img: "/assets/img/glowing-neon-line-stage-stand-de.jpg",
+                            name: "Chess Tournament ",
+                            prize: "1'st prize:3000",
+                            img: "/assets/img/1.png",
                         },
                         {
-                            name: "Web Designing",
-                            prize: "1'st prize:1000 <br> 2'nd prize:500",
-                            img: "/assets/img/1f9ca43d-6eb4-4da1-9e39-660197e8 (1).jpg",
-                        },
-                        {
-                            name: "Basic coding",
-                            prize: "1'st prize:1000 <br> 2'nd prize:500",
-                            img: "/assets/img/3054cf47-af6e-4eaf-bddc-daea2f6c.jpg",
-                        },
-                        {
-                            name: "Treasure Hunt",
-                            prize: "1'st prize:5000 <br> Spot registration only(First 10 teams)",
-                            img: "/assets/img/c4728530-723d-4bb6-bba0-417e8cf2.jpg",
-                        },
-                        {
-                            name: "Spot Games",
-                            prize: "Entry fee:20",
-                            img: "/assets/img/3368335c-0735-40f7-9c3c-6fd4e8b0.jpg",
+                            name: "Face Painting",
+                            prize: "1'st prize:2000",
+                            img: "/assets/img/facepainting.png",
                         },
                     ]);
                 }

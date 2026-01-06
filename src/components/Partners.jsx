@@ -21,22 +21,22 @@ const Partners = () => {
                     setBrands([
                         {
                             link: "https://www.instagram.com/vazhikatti__86/",
-                            img: "/assets/img/brands/WhatsApp Image 2023-02-14 at 3.35.56 PM.jpeg",
+                            img: "/assets/img/brands/alangar.png",
                         },
                         {
                             link: "https://www.instagram.com/lyfizy_group/",
-                            img: "/assets/img/brands/WhatsApp Image 2023-02-14 at 3.40.47 PM.jpeg",
+                            img: "/assets/img/brands/area51.png",
                         },
                         {
                             link: "https://www.instagram.com/le_ocio_/",
-                            img: "/assets/img/brands/WhatsApp Image 2023-02-14 at 3.43.13 PM.jpeg",
+                            img: "/assets/img/brands/chirayil.jpeg",
                         },
                         {
                             link: "https://instagram.com/kattumadam_marbles?igshid=YmMyMTA2M2Y=",
-                            img: "/assets/img/brands/WhatsApp Image 2023-02-15 at 4.20.41 PM.jpeg",
+                            img: "/assets/img/brands/lipzz.jpeg",
                         },
                         {
-                            link: "https://www.instagram.com/tiqnia2023/",
+                            link: "https://www.instagram.com/bceeyeah/",
                             img: "/assets/img/WhatsApp Image 2023-02-15 at 7.42.27 AM.jpeg",
                         },
                     ]);
@@ -47,11 +47,11 @@ const Partners = () => {
                 setBrands([
                     {
                         link: "https://www.instagram.com/vazhikatti__86/",
-                        img: "/assets/img/brands/WhatsApp Image 2023-02-14 at 3.35.56 PM.jpeg",
+                        img: "/assets/img/brands/alangar.png",
                     },
                     {
                         link: "https://www.instagram.com/lyfizy_group/",
-                        img: "/assets/img/brands/WhatsApp Image 2023-02-14 at 3.40.47 PM.jpeg",
+                        img: "/assets/img/brands/area51.png",
                     },
                     {
                         link: "https://www.instagram.com/le_ocio_/",
