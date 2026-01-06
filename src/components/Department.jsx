@@ -42,22 +42,22 @@ const Department = () => {
                     />
                     <img
                         src="assets/img/insta7.jpeg"
-                        alt="BCA"
+                        alt="BCA DEPARTMENT"
                         className="img-fluid mb-3"
                     />
                     <img
                         src="assets/img/bcadep2.JPG"
-                        alt="BCA"
+                        alt="BCA DEPARTMENT"
                         className="img-fluid mb-3"
                     />
                     <img
                         src="assets/img/insta9.jpeg"
-                        alt="BCA"
+                        alt="WMO IMAM GAZZALI BCA DEPARTMENT"
                         className="img-fluid mb-3"
                     />
                     <img
                         src="assets/img/insta10.jpeg"
-                        alt="BCA"
+                        alt="WMO IG BCA"
                         className="img-fluid mb-3"
                     />
 
