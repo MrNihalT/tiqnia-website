@@ -52,12 +52,14 @@ h1,
 .h1 {
     font-size: 48px;
     margin-bottom: 25px;
+    word-break: break-word;
 }
 
 h2,
 .h2 {
     font-size: 42px;
     margin-bottom: 25px;
+    word-break: break-word;
 }
 
 h3,
@@ -1034,6 +1036,7 @@ Cover
         .slider-content-inner
         .cover-title {
         font-size: 18px;
+        word-break: break-word;
     }
     .cover_slider
         .cover_item
@@ -1878,6 +1881,7 @@ body {
         .slider-content-inner
         .cover-title {
         max-width: 380px;
+        word-break: break-word;
     }
 }
 @media (max-width: 400px) {
@@ -1888,6 +1892,7 @@ body {
         .cover-title {
         max-width: 230px;
         font-size: 17px;
+        word-break: break-word;
     }
 }
 @media (max-width: 330px) {
@@ -1898,6 +1903,7 @@ body {
         .cover-title {
         max-width: 230px;
         font-size: 17px;
+        word-break: break-word;
     }
     .cover_slider
         .cover_item
@@ -1905,5 +1911,58 @@ body {
         .slider-content-inner
         .cover-xl-text {
         max-width: 200px;
+    }
+}
+
+/* ----------------Responsive Text Fixes ------------------- */
+@media (max-width: 991px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-xl-text {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-xl-text {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-title {
+        font-size: 24px;
+        max-width: 100%;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 575px) {
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-xl-text {
+        font-size: 32px;
+        word-break: break-word; /* Ensure wrapping */
+        max-width: 100%;
+    }
+    .cover_slider
+        .cover_item
+        .slider_content
+        .slider-content-inner
+        .cover-title {
+        font-size: 18px;
+        max-width: 100%;
+        max-width: 300px;
+        word-break: break-word;
     }
 }
