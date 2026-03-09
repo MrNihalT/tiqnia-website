@@ -1,6 +1,6 @@
 # TIQNIA - IT Fest Website 🖥️
 
-<img src="tiqnia-react/public/logo2.png" alt="Tiqnia Logo" width="200">
+<img src="assets/img/LOGO.png" alt="Tiqnia Logo" width="200">
 
 > Official website for **TIQNIA** — the IT Fest organized by the Department of Computer Applications, WMO IG Arts and Science College, Wayanad.
 
