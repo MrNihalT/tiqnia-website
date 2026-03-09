@@ -1,101 +1,136 @@
+# TIQNIA - IT Fest Website 🖥️
 
-# TIQNIA2023 - IT Fest Website :computer:
+<img src="tiqnia-react/public/logo2.png" alt="Tiqnia Logo" width="200">
 
+> Official website for **TIQNIA** — the IT Fest organized by the Department of Computer Applications, WMO IG Arts and Science College, Wayanad.
 
+**Developed by [Nihal T](http://www.nihalt.in)** 👨‍💻
 
-<img src="assets/img/LOGO.png" alt="Tiqnia2026 Logo" width="100%">
+> Originally created by [Rishwal](https://github.com/rishwal). Fully revamped, updated, and maintained by [Nihal T](http://www.nihalt.in) 🚀
 
-# Welcome to the TIQNIA2023 Website Repository! :tada:
+---
 
-### Created by  [Rishwal](https://github.com/rishwal) with HTML, CSS, and JQuery :rocket:
+## � About
 
-## Table of Contents :scroll:
+This project is a responsive event website developed for **TIQNIA**, the IT Fest organized by the Department of Computer Applications, **WMO IG Arts and Science College, Wayanad**.
 
-- [Introduction](#introduction)
-- [Key Features](#key-features)
-- [Event Details](#event-details)
-- [About Us](#about-us)
-- [Department of Computer Applications](#department-of-computer-applications)
-- [Our Partners](#our-partners)
-- [Registration](#registration)
-- [Contact Us](#contact-us)
+The website started as a static site built using **HTML, CSS, and jQuery**, providing a clean and interactive interface for users to explore event details, schedules, sponsors, and registration information. It allowed participants to easily learn about various technical events, access registration links, and stay updated about the fest — with a strong focus on responsive design, smooth navigation, and an engaging layout.
 
-## Introduction :wave:
+**The project has since been completely revamped** into a modern **React + Vite** application with Firebase integration, component-based architecture, smooth animations via Framer Motion, and deployment on Vercel — making it a scalable and maintainable platform for future editions of TIQNIA.
 
-Welcome to the repository for the official website of TIQNIA2023 - the IT Fest organized by WMO IG Arts and Science College, Wayanad! :school:
+---
 
-## Key Features :star:
+## �🛠️ Tech Stack
 
-- **Simple and Responsive Design**: Created using HTML, CSS, and JQuery.
-- **Event Information**: Details about the fest, schedule, and participating departments.
-- **Event Registration**: Easy registration process for participants.
-- **Event Showcase**: Information about various events with attractive visuals.
+| Technology                                      | Purpose                      |
+| ----------------------------------------------- | ---------------------------- |
+| [React 18](https://react.dev/)                  | UI Framework                 |
+| [Vite](https://vitejs.dev/)                     | Build Tool & Dev Server      |
+| [Firebase](https://firebase.google.com/)        | Backend & Real-time Database |
+| [React Router v6](https://reactrouter.com/)     | Client-side Routing          |
+| [Framer Motion](https://www.framer.com/motion/) | Animations                   |
+| [Swiper](https://swiperjs.com/)                 | Carousels & Sliders          |
+| [Vercel](https://vercel.com/)                   | Deployment                   |
 
-## Event Details :calendar:
+---
 
-### TIQNIA2023 - IT Fest Schedule :alarm_clock:
+## 📁 Project Structure
 
-- **Date**: 23rd February 2023
-- **Location**: Kappumchal, Wayanad
-- **Venue**: WMO IG Arts & Science College
+```
+tiqnia-main/
+├── tiqnia-react/          # Main React application (Vite)
+│   ├── public/            # Static assets
+│   ├── src/               # React source files
+│   ├── index.html         # Entry HTML
+│   ├── vite.config.js     # Vite configuration
+│   ├── package.json       # Dependencies
+│   └── vercel.json        # Vercel deployment config
+└── README.md
+```
 
-For more details, check out the [official event page](https://rishwal.github.io/tiqnia) :link:
+---
 
-## About Us :information_source:
+## 🚀 Getting Started
 
-The IT Fest of WMO IG Arts and Science College, Kappumchal Panamaram, is an exciting event showcasing talents in the field of Information Technology. Conducted by the Department of Computer Applications, this fest will feature 8 different events testing students' technical skills and creativity.
+### Prerequisites
 
-## Department of Computer Applications :desktop_computer:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/)
 
-The Department of Computer Applications at WMO IG Arts and Science College is dedicated to providing comprehensive education in computer applications and information technology. The upcoming IT Fest, Tiqnia2023, will be held on 23rd February 2023 and organized entirely by the students of the BCA department.
+### Installation
 
-# Our Sponsors
+```bash
+# 1. Clone the repository
+git clone https://github.com/MrNihalT/tiqnia-website.git
+cd tiqnia-main/tiqnia-react
 
-We are proud to be associated with the following partners and sponsors:
+# 2. Install dependencies
+npm install
 
-- ## [Vazhikatti](https://nihalt.in)
-  ![Vazhikatti](assets/img/brands/chirayil.jpeg)
+# 3. Set up environment variables
+cp .env.example .env
+# Edit .env with your Firebase config
 
-- ## [Lyfizy Group](https://nihalt.in)
-  ![Lyfizy Group](assets/img/brands/lipzz.jpeg)
+# 4. Start the development server
+npm run dev
+```
 
-- ## [Le Ocio](https://nihalt.in)
-  ![Le Ocio](assets/img/brands/alangar.png)
+The app will be available at `http://localhost:5173`.
 
-- ## [Kattumadam Marbles](https://nihalt.in)
-  ![Kattumadam Marbles](assets/img/brands/area51.png)
+### Available Scripts
 
-- ## [Tiqnia2023](https://www.instagram.com/tiqnia2023](https://www.instagram.com/bceeyeah/)
-  <img src="assets/img/WhatsApp Image 2023-02-15 at 7.42.27 AM.jpeg" alt="Tiqnia2023 Logo" width="100%">
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build locally
+npm run lint      # Run ESLint
+```
 
+---
 
-## Registration :clipboard:
+## ✨ Features
 
-Ready to participate? Register for TIQNIA2023 now! :point_down:
+- ⚡ **Fast & Performant** — Built with Vite for lightning-fast development and optimized production builds
+- 📱 **Fully Responsive** — Great experience on all devices (mobile, tablet, desktop)
+- 🔥 **Firebase Integration** — Real-time sponsor/partner updates and dynamic content
+- 🎬 **Smooth Animations** — Powered by Framer Motion for engaging UI interactions
+- 🧭 **Client-side Routing** — Seamless navigation using React Router v6
+- 🔍 **SEO Ready** — Meta tags managed via `react-helmet-async`
+- 📊 **Analytics** — Integrated with Vercel Analytics
 
-[Register Here](https://forms.gle/t6vWyAET3kV4boHd7) :link:
+---
 
-## Contact Us :email:
+## 📅 Event Details
 
-For any inquiries or assistance, feel free to reach out to our team:
+- **Event**: TIQNIA - IT Fest
+- **Date**: 08th January 2026
+- **Venue**: WMO IG Arts & Science College, Kappumchal, Wayanad
 
-- **Nihal**: [+91-9633216991](tel:+91-9633216991)
-- **Nifan**: [+91-9526110811](tel:+91-9526110811)
-- **Asif**: [+91-8129763260](tel:+91-8129763260)
-- **Mubaseer**: [+91-9061874787](tel:+91-9061874787)
+---
 
-- **Email**: [tiqnia2023@gmail.com](mailto:tiqnia2023@gmail.com)
+## 🤝 Contributing
 
+Contributions are welcome!
 
-## Contributing :handshake:
+1. Fork this repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
-I welcome contributions from the community! If you'd like to contribute to the TIQNIA2023 website, follow these steps:
+---
 
-1. Fork this repository.
-2. Create a new branch: `git checkout -b feature/new-feature`.
-3. Make your changes and commit them: `git commit -m 'Add new feature'`.
-4. Push to the branch: `git push origin feature/new-feature`.
-5. Open a pull request.
+## 📬 Contact
 
+- **Nihal T** — [nihal.chiyoor@gmail.com](mailto:nihal.chiyoor@gmail.com) | [nihalt.in](http://www.nihalt.in)
+- **Phone**: [+91-7736697341](tel:+91-7736697341)
 
-## We are looking forward to seeing you at TIQNIA2023! :rocket:
+---
+
+## 📄 License
+
+This project is open source. Feel free to use and modify it.
+
+---
+
+> Made with ❤️ by [Nihal T](http://www.nihalt.in)
