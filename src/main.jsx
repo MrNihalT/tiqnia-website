@@ -15,7 +15,7 @@ import "./assets/css/main.css";
 
 import { HelmetProvider } from "react-helmet-async";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")).rnder(
     <React.StrictMode>
         <HelmetProvider>
             <App />
